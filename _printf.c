@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * _printf - Refaire le printf réél
+ * _printf - Refaire le printf réel
  * @format: ce que va taper le user
  *
  * Return: count
