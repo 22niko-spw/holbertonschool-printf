@@ -37,38 +37,33 @@ The conversion modifiers supported by this function are:
 
 ## 📄 <span id="flow-chart">Flow Chart</span>
 
-- exemple: modifier avec le notre.
-
-```mermaid
 flowchart TD
-
-A([START]) --> B["i = 0; count = 0"]
-B --> C{format[i] != '\0'}
-
-C -- No --> End([return count])
-
-C -- Yes --> D{format[i] == '%'}
-
-D -- No --> E["write(1, &format[i], 1)"]
-E --> F["count += 1"]
-F --> G["i += 1"]
-G --> LoopBack
-
-D -- Yes --> H["i++"]
-H --> I["f = get_pf_func(format[i])"]
-I --> J{f != NULL ?}
-
-J -- No --> K["write(1, &format[i-1], 2)"]
-K --> L["count += 2"]
-L --> M["i += 1"]
-M --> LoopBack
-
-J -- Yes --> N["count += f(args)"]
-N --> O["i += 1"]
-O --> LoopBack
-
-LoopBack[loop back] --> C
-```
+    A([START]) --> B["i = 0; count = 0"]
+    B --> C{format[i] != '\0'}
+    
+    C -- No --> End([return count])
+    
+    C -- Yes --> D{format[i] == '%'}
+    
+    D -- No --> E["write(1, &format[i], 1)"]
+    E --> F["count += 1"]
+    F --> G["i += 1"]
+    G --> LoopBack
+    
+    D -- Yes --> H["i++"]
+    H --> I["f = get_pf_func(format[i])"]
+    I --> J{f != NULL ?}
+    
+    J -- No --> K["write(1, &format[i-1], 2)"]
+    K --> L["count += 2"]
+    L --> M["i += 1"]
+    M --> LoopBack
+    
+    J -- Yes --> N["count += f(args)"]
+    N --> O["i += 1"]
+    O --> LoopBack
+    
+    LoopBack[loop back] --> C
 
 ## 🔨 <span id="tech-stack">Tech stack</span>
 
