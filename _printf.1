@@ -1,0 +1,117 @@
+.TH _PRINTF 1 "Mars 2026" "1.0" "Manuel du programmeur"
+.SH NOM
+_printf \- fonction de formatage et d'impression sur la sortie standard
+.SH SYNOPSIS
+.B #include "main.h"
+.PP
+.BI "int _printf(const char *" format ", ...);"
+.SH DESCRIPTION
+La fonction
+.B _printf()
+produit une sortie formatée vers la sortie standard
+.IR stdout .
+Elle fonctionne de manière similaire à la fonction
+.BR printf (3)
+de la bibliothèque standard C, mais constitue une implémentation personnalisée.
+.PP
+La chaîne
+.I format
+est une chaîne de caractères, éventuellement accompagnée de
+.IR "spécificateurs de conversion" ,
+chacun introduit par le caractère
+.BR % ,
+et suivi d'un caractère de conversion.
+.SH SPÉCIFICATEURS DE CONVERSION
+.TP
+.B %c
+Convertit le prochain argument (de type
+.IR int )
+en un caractère
+.I unsigned char
+et l'écrit sur la sortie standard.
+.TP
+.B %s
+Convertit le prochain argument (de type
+.IR "char *" )
+en une chaîne de caractères. Les caractères de la chaîne sont écrits jusqu'au caractère nul
+.RB ( '\\0' )
+terminal. Si l'argument est
+.BR NULL ,
+le comportement est indéfini.
+.TP
+.B %d
+Convertit le prochain argument (de type
+.IR int )
+en sa représentation décimale signée et l'écrit sur la sortie standard.
+.TP
+.B %i
+Identique à
+.BR %d .
+Convertit le prochain argument (de type
+.IR int )
+en sa représentation décimale signée et l'écrit sur la sortie standard.
+.TP
+.B %%
+Écrit un caractère littéral
+.B %
+sur la sortie standard. Aucun argument n'est consommé.
+.SH VALEUR DE RETOUR
+En cas de succès,
+.B _printf()
+retourne le nombre de caractères écrits sur la sortie standard (sans compter le caractère nul terminal).
+.PP
+En cas d'erreur (chaîne
+.I format
+.BR NULL ,
+ou spécificateur invalide), la fonction retourne
+.BR \-1 .
+.SH EXEMPLES
+.PP
+Afficher une chaîne de caractères :
+.PP
+.RS
+.nf
+_printf("Bonjour, %s !\\n", "monde");
+.fi
+.RE
+.PP
+Afficher un entier :
+.PP
+.RS
+.nf
+_printf("La valeur est : %d\\n", 42);
+.fi
+.RE
+.PP
+Afficher un caractère et un pourcentage :
+.PP
+.RS
+.nf
+_printf("Caractere : %c, taux : 100%%\\n", 'A');
+.fi
+.RE
+.PP
+Combiner plusieurs spécificateurs :
+.PP
+.RS
+.nf
+int n;
+n = _printf("Nom : %s, Age : %i\\n", "Alice", 30);
+_printf("Nombre de caracteres ecrits : %d\\n", n);
+.fi
+.RE
+.SH NOTES
+Cette fonction est une réimplémentation pédagogique de
+.BR printf (3).
+Elle ne gère pas les options de largeur, de précision, ni les modificateurs de longueur.
+Les comportements non décrits dans cette page sont indéfinis.
+.SH VOIR AUSSI
+.BR printf (3),
+.BR write (2),
+.BR stdarg (3),
+.BR va_list (3)
+.SH AUTEUR
+Écrit dans le cadre du projet
+.B ft_printf
+de l'école
+.BR Holberton .
