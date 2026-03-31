@@ -118,7 +118,7 @@ git clone https://github.com/22niko-spw/holbertonschool-printf.git
 
 2. Open the repository you've just cloned.
 
-3. In order to have access to the manual page copy the indicated file in the indicated adress with superuser powers:
+3. In order to have access to the manual page copy the indicated file in the indicated address with superuser powers:
 
 ```bash
 sudo cp _printf.1 /usr/share/man/man1/
