@@ -134,7 +134,7 @@ sudo cp _printf.1 /usr/share/man/man1/
 4. Compile the project:
 
 ```bash
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 \*.c -o _printf
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o _printf
 ```
 
 ## <span id="whats-next">What's next?</span>
