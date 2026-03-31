@@ -81,19 +81,11 @@ flowchart TD
 ## 🔨 <span id="tech-stack">Tech stack</span>
 
 <p align="left">
-  ©️Language Programming
-</p>
-
-<p align="left">
-  🫂GitHub
-</p>
-
-<p align="left">
-  🆚code
-</p>
-
-<p align="left">
-  GCC compiler
+<img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C badge">
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub badge">
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" alt="VSCode badge">
+<img src="https://img.shields.io/badge/GCC-FFCC00?style=for-the-badge&logo=gnu-bash&logoColor=black" alt="GCC badge">
+<img src="https://img.shields.io/badge/Ubuntu-E9433F?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu badge">
 </p>
 
 ## 📂 <span id="files-description">File description</span>
