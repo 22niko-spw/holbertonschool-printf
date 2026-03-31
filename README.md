@@ -41,7 +41,7 @@ The conversion modifiers supported by this function are:
 flowchart TD
     START([START])
     INIT["i = 0; count = 0"]
-    CHECK_NULL{{"format[i] != '0'"}}
+    CHECK_NULL{{"format[i] != '\0'"}}
     RETURN(["return(count)"])
     CHECK_PERCENT{{"format[i] == '%'"}}
     INC_I1["i++"]
