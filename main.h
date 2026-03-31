@@ -13,7 +13,7 @@
 
 typedef struct format_s
 {
-	char *spec;
+	const char *spec;
 	int (*func)(va_list);
 } format_t;
 
